@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 2;
+    display: flex;
+    width: 1440px;
+    padding: 20px 48px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    position: absolute;
+}
+
+.content-header {
+    width: 190px;
+    height: 24px;
+    overflow-y: hidden;
+}
+
+.content-text-header a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #fff;
+    font-family: "open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.content-text-header {
+    padding: 5px;
+}
+
+.content-contact-header {
+    background-color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.content-contact-header a {
+    text-decoration: none;
+}
+
+.section-banner-1 {
+
+    background: url(2149211266-2.svg) lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, regba(11, 17, 22, 0.50) 0%, rgba (11, 17, 22, 0.10) 50.3%) rgba(11, 17, 22, 0.50) 100%;
+}
