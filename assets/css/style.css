@@ -1,13 +1,49 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    max-width: 1440px;
     overflow-x: hidden;
+    max-width: 1440px;
 }
 
+:root {
+    --text-white: #FFF;
+    --text-color-color-Cinza-Claro-25: #FCFCFC;
+    --text-color-color-Cinza-Claro-25rgb: rgba(252, 252, 252, 0.80);
+    --text-color-Preto-Charcoal-400: #40464D;
+    --text-color-Preto-Charcoal-900: #070B0E;
+
+    --font-size-14p: 14px;
+    --font-size-16p: 16px;
+    --font-size-18p: 18px;
+    --font-size-20p: 20px;
+    --font-size-28p: 28px;
+    --font-size-32p: 32px;
+    --font-size-40p: 40px;
+    --font-size-48p: 48px;
+
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --line-height-110: 110%;
+    --line-height-120: 120%;
+    --line-height-130: 130%;
+    --line-height-140: 140%;
+    --line-height-150: 150%;
+
+    --font-style-normal: normal;
+}
+
+body {
+    max-width: 1440px;
+    background-color: #000;
+}
+
+/*----- start header -----*/
+
 header {
-    z-index: 2;
+    z-index: 3;
     display: flex;
     width: 1440px;
     padding: 20px 48px;
@@ -17,38 +53,93 @@ header {
     position: absolute;
 }
 
-.content-header {
-    width: 190px;
-    height: 24px;
-    overflow-y: hidden;
+.img-logo {
+    display: flex;
+    width: auto;
 }
 
-.content-text-header a {
+.img-logo img {
+    width: 186px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.text-content-header {
+    width: auto;
+}
+
+.text-content-header a {
     text-decoration: none;
     margin: 0 10px;
     color: #fff;
-    font-family: "open Sans";
+    font-family: "Open Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
 }
 
-.content-text-header {
-    padding: 5px;
-}
-
-.content-contact-header {
+.text-contact-header {
+    width: 199px;
+    height: 40px;
     background-color: #fff;
     text-decoration: none;
     padding: 5px 20px;
+    align-content: center;
 }
 
-.content-contact-header a {
+.text-contact-header a {
     text-decoration: none;
 }
 
-.section-banner-1 {
+/*----- end header -----*/
+/*----- start section banner -----*/
 
-    background: url(2149211266-2.svg) lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, regba(11, 17, 22, 0.50) 0%, rgba (11, 17, 22, 0.10) 50.3%) rgba(11, 17, 22, 0.50) 100%;
+section img {
+    z-index: -1;
+    overflow-y: hidden;
+    position: relative;
+    filter: brightness(.8);
 }
+
+.vector-content-1 {
+    position: absolute;
+    z-index: 3;
+    top: 88px;
+    left: 510px;
+}
+
+.vector-content-2 {
+    position: absolute;
+    z-index: 3;
+    top: 88px;
+    left: 860px;
+}
+
+.vector-content-3 {
+    position: absolute;
+    z-index: 3;
+    top: 361px;
+    left: 860px;
+    transform: rotate(180deg);
+}
+
+.vector-content-4 {
+    position: absolute;
+    z-index: 3;
+    top: 361px;
+    left: 510px;
+    transform: rotate(180deg);
+}
+
+.text-content-section {
+    position: absolute;
+    top: 574px;
+    left: 150px;
+    color: var(--text-color-color-Cinza-Claro-25);
+    font-size: var(--font-size-48p);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-700);
+}
+
+/*----- end section banner -----*/
