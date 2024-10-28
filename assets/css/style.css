@@ -234,16 +234,18 @@ header {
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
+    position: relative;
 }
 
 .scroller-content {
+
     display: flex;
     align-items: center;
     gap: 24px;
 
     display: inline-block;
     white-space: nowrap;
-    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
 }
 
 .content-scroller-h5 {
@@ -280,4 +282,5 @@ header {
 .scroller-content h3, .scroller-content .content-scroller-h5 {
     display: inline-block;
     margin: 0 24px;
+    /* Espaço entre os elementos */
 }
