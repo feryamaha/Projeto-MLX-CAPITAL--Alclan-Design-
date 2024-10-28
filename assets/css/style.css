@@ -1,15 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     max-width: 1440px;
 }
 
-
 :root {
     --White: #FFF;
-    /*Guide Style Carvão*/
     --black-25: #F7F7F8;
     --black-50: #E7E8E9;
     --black-100: #B7BABC;
@@ -21,7 +22,6 @@
     --black-700: #0E161D;
     --black-800: #0D131A;
     --black-900: #070B0E;
-    /*Guide Style Cinza Claro*/
     --gray-25: #FCFCFC;
     --gray-50: #FBFBFB;
     --gray-100: #F7F7F7;
@@ -33,11 +33,6 @@
     --gray-700: #828280;
     --gray-800: #575756;
     --gray-900: #2B2B2B;
-
-
-
-
-
     --font-size-14p: 14px;
     --font-size-16p: 16px;
     --font-size-18p: 18px;
@@ -46,17 +41,14 @@
     --font-size-32p: 32px;
     --font-size-40p: 40px;
     --font-size-48p: 48px;
-
     --font-weight-400: 400;
     --font-weight-600: 600;
     --font-weight-700: 700;
-
     --line-height-110: 110%;
     --line-height-120: 120%;
     --line-height-130: 130%;
     --line-height-140: 140%;
     --line-height-150: 150%;
-
     --font-style-normal: normal;
 }
 
@@ -65,106 +57,178 @@ body {
     background-color: #000;
 }
 
-/*----- start header -----*/
-
 header {
-    z-index: 3;
+    position: absolute;
+    z-index: 2;
     display: flex;
-    width: 1440px;
+    width: 100%;
     padding: 20px 48px;
     justify-content: space-between;
     align-items: center;
-    background-color: none;
-    position: absolute;
 }
 
-.img-logo {
-    display: flex;
-    width: auto;
-}
-
-.img-logo img {
-    width: 186px;
+.div-img-logo {
+    width: 185.786px;
     height: 24px;
     flex-shrink: 0;
 }
 
-.text-content-header {
-    width: auto;
+.div-content-text-header {
+    display: flex;
+    align-items: center;
+    gap: 21px;
 }
 
-.text-content-header a {
+.div-content-text-header a {
     text-decoration: none;
-    margin: 0 10px;
-    color: #fff;
     font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
+    color: var(--White);
+    font-size: var(--font-size-14p);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-150);
 }
 
-.text-contact-header {
-    width: 199px;
+.ButtonMain-header {
+    display: flex;
     height: 40px;
-    background-color: #fff;
-    text-decoration: none;
-    padding: 5px 20px;
-    align-content: center;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    background: var(--White);
 }
 
-.text-contact-header a {
+.ButtonMain-header a {
     text-decoration: none;
+    color: var(--black-900);
+    font-family: "Open Sans";
+    font-size: var(--font-size-18p);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-140);
 }
 
-/*----- end header -----*/
-/*----- start section banner -----*/
-
-section img {
-    z-index: -1;
-    overflow-y: hidden;
+.section-banner1 {
+    width: 1440px;
+    height: 800px;
     position: relative;
-    filter: brightness(.8);
+    background: linear-gradient(180deg, rgba(11, 17, 22, 0.50) 0%, rgba(11, 17, 22, 0.10) 50.3%, rgba(11, 17, 22, 0.50) 100%), url('./assets/img/2149211266-2.svg') no-repeat center center;
+    background-size: cover;
 }
 
-.vector-content-1 {
+.section-banner1 img {
+    filter: brightness(75%);
+}
+
+.vector-content .vector1 {
     position: absolute;
-    z-index: 3;
+    z-index: 2;
+    width: 306.031px;
+    height: 232.584px;
+    flex-shrink: 0;
+    fill: rgba(255, 255, 255, 0.06);
+    stroke-width: 1px;
+    stroke: #FFF;
     top: 88px;
-    left: 510px;
+    left: 394px;
 }
 
-.vector-content-2 {
+.vector-content .vector2 {
     position: absolute;
-    z-index: 3;
+    z-index: 2;
+    width: 306.031px;
+    height: 232.584px;
+    flex-shrink: 0;
+    fill: linear-gradient(201deg, rgba(255, 255, 255, 0.06) -2.75%, rgba(153, 153, 153, 0.06) 87.99%);
+    stroke-width: 1px;
+    stroke: rgba(255, 255, 255, 0.20);
     top: 88px;
-    left: 860px;
+    left: 740.85px;
 }
 
-.vector-content-3 {
+.vector-content .vector3 {
     position: absolute;
-    z-index: 3;
-    top: 361px;
-    left: 860px;
+    z-index: 2;
+    width: 306.031px;
+    height: 232.584px;
+    flex-shrink: 0;
+    fill: linear-gradient(201deg, rgba(255, 255, 255, 0.06) -2.75%, rgba(153, 153, 153, 0.06) 87.99%);
+    stroke-width: 1px;
+    stroke: rgba(255, 255, 255, 0.20);
     transform: rotate(180deg);
+    top: 361.42px;
+    left: 394px;
 }
 
-.vector-content-4 {
+.vector-content .vector-4 {
     position: absolute;
-    z-index: 3;
-    top: 361px;
-    left: 510px;
-    transform: rotate(180deg);
+    z-index: 2;
+    width: 306.031px;
+    height: 232.584px;
+    flex-shrink: 0;
+    fill: linear-gradient(201deg, rgba(255, 255, 255, 0.06) -2.75%, rgba(153, 153, 153, 0.06) 87.99%);
+    stroke-width: 1px;
+    stroke: rgba(255, 255, 255, 0.20);
+    top: 361.42px;
+    left: 740.85px;
 }
 
-.text-content-section {
+.h1-content-banner {
     position: absolute;
+    width: 784px;
     top: 574px;
-    left: 150px;
-    color: var(--text-color-color-Cinza-Claro-25);
+    left: 48px;
+    z-index: 3;
+}
+
+.h1-content-banner h1 {
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro";
     font-size: var(--font-size-48p);
     font-style: var(--font-style-normal);
     font-weight: var(--font-weight-700);
+    line-height: var(--line-height-110);
 }
 
-/*----- end section banner -----*/
+.div-content-contact {
+    position: absolute;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+    top: 704px;
+    left: 48px;
+    gap: 32px;
+    width: 357px;
+    height: 48px;
+}
+
+.button-banner a {
+    text-decoration: none;
+    display: flex;
+    height: 48px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    font-family: "Open Sans";
+    background: var(--White);
+    color: var(--black-900);
+    font-size: var(--font-size-18p);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-140);
+}
+
+.button-saibMais a {
+    text-decoration: none;
+    color: var(--gray-25);
+    font-family: "Open Sans";
+    font-size: var(--font-size-18p);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-140);
+}
