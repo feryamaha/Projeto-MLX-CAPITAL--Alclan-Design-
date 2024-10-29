@@ -193,6 +193,7 @@ header {
 }
 
 .button-banner a {
+    overflow: hidden;
     text-decoration: none;
     display: flex;
     height: 48px;
@@ -211,6 +212,7 @@ header {
 }
 
 .button-saibMais a {
+    overflow: hidden;
     text-decoration: none;
     font-family: "Open Sans";
     color: var(--gray-25);
@@ -223,6 +225,8 @@ header {
 /*-----scroller-----*/
 
 .section-scroller {
+    padding: 2%;
+    background-color: orangered;
     display: flex;
     padding: 32px 0px;
     justify-content: flex-end;
@@ -230,19 +234,16 @@ header {
     align-self: stretch;
     border: 1px solid var(--gray-600);
     background: var(--gray-300);
-
     overflow: hidden;
-    width: 100%;
     white-space: nowrap;
     position: relative;
 }
 
 .scroller-content {
-
+    min-width: 100vh;
     display: flex;
     align-items: center;
     gap: 24px;
-
     display: inline-block;
     white-space: nowrap;
     transform: translateX(100%);
@@ -276,11 +277,79 @@ header {
     font-style: var(--font-style-normal);
     font-weight: var(--font-weight-400);
     line-height: var(--line-height-150);
-
 }
 
 .scroller-content h3, .scroller-content .content-scroller-h5 {
     display: inline-block;
     margin: 0 24px;
-    /* Espaço entre os elementos */
 }
+
+/*-----section scroller-----*/
+
+/*-----section banner 2-----*/
+.section-banner2 {
+    display: flex;
+    height: 812px;
+    align-self: stretch;
+    background: var(--White);
+    overflow: hidden;
+    justify-content: left;
+    position: relative;
+}
+
+.img1-banner2 {
+    position: absolute;
+    width: 1174px;
+    height: 812px;
+    flex-shrink: 0;
+    right: 0;
+}
+
+.vector1-banner2 {
+    position: absolute;
+    left: -182px;
+    width: 1089px;
+    height: 819px;
+    flex-shrink: 0;
+    fill: var(--gray-100);
+}
+
+.vector3412, .vector3417 {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.vector3412 {
+    left: 830px;
+    top: 143px;
+}
+
+.vector3417 {
+    left: 740px;
+    top: 386px;
+}
+
+.vector3 {
+    left: 740px;
+    top: 386px;
+}
+
+.vector15 {
+    position: absolute;
+    z-index: 3;
+    width: 32px;
+    height: 100px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    padding: 1%;
+    background-color: blue;
+    border: 1px solid blue;
+    stroke: var(--gray-500);
+    left: 48px;
+    top: 133px;
+}
+
+/*-----section banner 2-----*/
