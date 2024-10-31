@@ -5,7 +5,6 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    overflow-x: hidden;
     max-width: 1440px;
 }
 
@@ -184,7 +183,6 @@ header {
     z-index: 3;
     display: inline-flex;
     align-items: center;
-    gap: 32px;
     top: 704px;
     left: 48px;
     gap: 32px;
@@ -211,6 +209,18 @@ header {
     line-height: var(--line-height-140);
 }
 
+.button-saibMais {
+    overflow-y: hidden;
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+}
+
 .button-saibMais a {
     overflow: hidden;
     text-decoration: none;
@@ -220,6 +230,12 @@ header {
     font-style: var(--font-style-normal);
     font-weight: var(--font-weight-600);
     line-height: var(--line-height-140);
+}
+
+.button-saibMais img {
+
+    width: 20px;
+    height: 20px;
 }
 
 /*-----scroller-----*/
@@ -295,6 +311,7 @@ header {
     overflow: hidden;
     justify-content: left;
     position: relative;
+    background-color: #dbd4d4;
 }
 
 .img1-banner2 {
@@ -303,6 +320,7 @@ header {
     height: 812px;
     flex-shrink: 0;
     right: 0;
+    filter: brightness(80%);
 }
 
 .vector1-banner2 {
@@ -315,6 +333,10 @@ header {
 }
 
 .vector3412, .vector3417 {
+    /*Inspect
+    border: 10px solid red;
+    border-radius: 50%;
+    Inspect*/
     position: absolute;
     z-index: 2;
     width: 20px;
@@ -332,24 +354,159 @@ header {
     top: 386px;
 }
 
-.vector3 {
-    left: 740px;
-    top: 386px;
-}
-
 .vector15 {
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     width: 32px;
     height: 100px;
     flex-shrink: 0;
     stroke-width: 1px;
-    padding: 1%;
-    background-color: blue;
-    border: 1px solid blue;
+
     stroke: var(--gray-500);
     left: 48px;
     top: 133px;
+}
+
+.vector19a {
+    position: absolute;
+    z-index: 2;
+    left: 845px;
+    top: 155px;
+}
+
+.vector12 {
+    position: absolute;
+    z-index: 2;
+    left: 840px;
+    top: 155px;
+    width: auto;
+    height: 605px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: #FFF;
+    opacity: 0.4;
+}
+
+.vector19b {
+    position: absolute;
+    z-index: 2;
+    left: 755px;
+    top: 395px;
+}
+
+.vector17 {
+    position: absolute;
+    z-index: 3;
+    left: 749.5px;
+    top: 405px;
+    width: auto;
+    height: 350px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: #FFF;
+    opacity: 0.4;
+}
+
+.text-content-banner2-h3 {
+    position: absolute;
+    z-index: 2;
+    color: var(--black-900);
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    left: 90px;
+    top: 170px;
+}
+
+.text-content-banner2-h2 {
+    position: absolute;
+    z-index: 2;
+    left: 48px;
+    top: 222px;
+    width: 700px;
+    height: 96px;
+    color: var(--Preto-Charcoal-900, #070B0E);
+
+    /* Heading/H2 40px Medium */
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 48px */
+    letter-spacing: 0.4px;
+}
+
+.text-content-banner2-h3-2 {
+    position: absolute;
+    z-index: 2;
+    left: 48px;
+    top: 334px;
+    width: 599px;
+    color: var(--Preto-Charcoal-400, #40464D);
+
+    /* Body/18px Regular */
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 27px */
+
+}
+
+.button-main-banner2 {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    display: inline-flex;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    left: 48px;
+    top: 500px;
+}
+
+.button-main-banner2 a {
+    text-decoration: none;
+    color: var(--Preto-Charcoal-900, #070B0E);
+
+    /* Button/Main */
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 25.2px */
+}
+
+.button-main-banner2 img {
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+}
+
+.text-content-banner2-h3-3 {
+    position: absolute;
+    z-index: 2;
+    width: 393px;
+    left: 48px;
+    top: 620px;
+
+
+    color: var(--Preto-Charcoal-900, #070B0E);
+
+    /* Body/18px SemiBold */
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 27px */
+
 }
 
 /*-----section banner 2-----*/
