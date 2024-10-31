@@ -162,7 +162,7 @@ header {
 
 .h1-content-banner {
     position: absolute;
-    width: 784px;
+    /*width: 784px;*/
     top: 574px;
     left: 48px;
     z-index: 3;
