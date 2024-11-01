@@ -242,7 +242,6 @@ header {
 
 .section-scroller {
     padding: 2%;
-    background-color: orangered;
     display: flex;
     padding: 32px 0px;
     justify-content: flex-end;
@@ -250,7 +249,7 @@ header {
     align-self: stretch;
     border: 1px solid var(--gray-600);
     background: var(--gray-300);
-    overflow: hidden;
+    overflow-x: hidden;
     white-space: nowrap;
     position: relative;
 }
@@ -509,4 +508,96 @@ header {
 
 }
 
+.text-content-banner2-MLX-CAPITAL {
+    position: absolute;
+    z-index: 3;
+    left: 868px;
+    top: 131px;
+    display: inline-flex;
+    padding: 6px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.text-content-banner2-MLX-CAPITAL h3 {
+    color: #FFF;
+    text-align: right;
+
+    /* Body/14px SemiBold */
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 21px */
+}
+
 /*-----section banner 2-----*/
+/*-----section banner 3-----*/
+
+.section-banner3 {
+    position: relative;
+    width: 1440px;
+    height: 3994px;
+    background: var(--Preto-Charcoal-700, #0E161D);
+}
+
+.vector15-banner3 {
+    z-index: 2;
+    position: absolute;
+    left: 48px;
+    top: 120px;
+}
+
+.text-content-banner3h31 {
+    position: absolute;
+    top: 108.5px;
+    left: 95px;
+    color: var(--Cinza-Claro-25, #FCFCFC);
+
+    /* Body/14px SemiBold */
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 21px */
+}
+
+.text-content-banner3h21 {
+    position: absolute;
+    top: 200px;
+    left: 48px;
+    width: 725px;
+    color: var(--Cinza-Claro-25, #FCFCFC);
+
+    /* Heading/H2 40px Medium */
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 48px */
+    letter-spacing: 0.4px;
+}
+
+.content-grade-frame {
+    display: flex;
+    width: 100%;
+}
+
+.content-grade-frame svg {
+    margin-right: 0;
+    width: 337.999px;
+    height: 338.009px;
+    flex-shrink: 0;
+    opacity: 0.2;
+}
+
+
+
+/*-----section banner 3-----*/
