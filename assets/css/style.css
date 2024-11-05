@@ -247,6 +247,7 @@ header {
 /*-----scroller-----*/
 
 .section-scroller {
+    height: 106px;
     padding: 2%;
     display: flex;
     padding: 32px 0px;
@@ -255,7 +256,7 @@ header {
     align-self: stretch;
     border: 1px solid var(--gray-600);
     background: var(--gray-300);
-    overflow-x: hidden;
+    overflow: hidden;
     white-space: nowrap;
     position: relative;
 }
@@ -551,15 +552,16 @@ header {
 }
 
 .vector15-banner3 {
-    z-index: 2;
     position: absolute;
+    z-index: 2;
     left: 48px;
-    top: 90px;
+    top: 84px;
+
 }
 
 .text-content-banner3h31 {
     position: absolute;
-    top: 78.5px;
+    top: 72.5px;
     left: 95px;
     color: var(--Cinza-Claro-25, #FCFCFC);
 
@@ -570,12 +572,13 @@ header {
     font-weight: 600;
     line-height: 150%;
     /* 21px */
+
 }
 
 .text-content-banner3h21 {
     position: absolute;
-    top: 160px;
     left: 48px;
+    top: 153px;
     width: 725px;
     color: var(--Cinza-Claro-25, #FCFCFC);
 
@@ -589,26 +592,22 @@ header {
     letter-spacing: 0.4px;
 }
 
-.content-grade-frame {
-    display: flex;
-    width: 100%;
-}
-
 .content-grade-frame svg {
-    position: relative;
-    margin-right: 0;
-    margin-top: -90.5px;
+    position: absolute;
+    right: 0;
+    top: -105px;
     width: 337.999px;
-    height: 338.009px;
+    /*height: 338.009px;*/
     flex-shrink: 0;
-    opacity: 0.2;
+    /*opacity: 0.2;
+    border: 1px solid red;*/
 
 }
 
 .content-button-banner3 {
     position: absolute;
     left: 955px;
-    top: 175.5px;
+    top: 158px;
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -647,7 +646,7 @@ header {
 
 .div-content-banner3-wrapper-img {
     position: relative;
-    top: 150px;
+    top: 362px;
     width: 1344px;
     height: auto;
     display: flex;
@@ -678,7 +677,6 @@ header {
     z-index: 4;
     left: 0;
     top: 0;
-
 }
 
 .div-content-img-banner3-frame3445 h4 {
@@ -770,15 +768,17 @@ header {
     filter: drop-shadow(0px 1px 1.8px rgba(0, 0, 0, 0.65));
 }
 
+/*----SECTION BANNER 4----*/
+
 .section-banner4 {
     position: absolute;
     z-index: 4;
-    top: 2824px;
-    bottom: 704px;
-    background-color: white;
     width: 1440px;
     height: 586px;
-    flex-shrink: 0;
+    top: 2762px;
+    bottom: 704px;
+    background-color: white;
+
 }
 
 .vector15-banner4 {
@@ -915,13 +915,156 @@ footer {
 }
 
 footer img {
-    border: 1px solid red;
     z-index: 4;
     position: absolute;
     left: 48px;
-    top: 88px;
+    top: 146px;
 }
 
+.wrapper-text-content-footer-contact3442 {
+    position: absolute;
+    left: 48px;
+    top: 224px;
+    width: 521px;
+    display: block;
+}
+
+.wrapper-text-content-footer-contact3442 h2 {
+    width: 493px;
+    color: var(--Cinza-Claro-25, #FCFCFC);
+
+    /* Heading/H2 40px Medium */
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    /* 48px */
+    letter-spacing: 0.4px;
+    margin-left: 0;
+    margin-bottom: 32px;
+}
+
+.Button-main-footer3442 a {
+    margin-left: 0;
+    width: 200px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    height: 48px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    font-family: "Open Sans";
+    background: var(--White);
+    color: var(--black-900);
+    font-size: var(--font-size-18p);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-140);
+}
+
+.wrapper-text-content-footer3426 {
+    position: absolute;
+    right: 48px;
+    top: 204px;
+    display: flex;
+    width: 358px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ptext3426,
+.ptext3426-contact,
+.ptext3426-whatsapp,
+.ptext3426-fone,
+.ptext3426-email-contatc,
+.ptext3426-email {
+    align-self: stretch;
+    color: var(--Cinza-Claro-25, #FCFCFC);
+    font-family: "Open Sans";
+    font-style: normal;
+    line-height: 150%;
+    margin-left: 0;
+}
+
+.ptext3426,
+.ptext3426-contact,
+.ptext3426-email,
+.ptext3426-fone {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ptext3426-whatsapp,
+.ptext3426-email-contatc {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ptext3426 {
+    margin-bottom: 14px;
+}
+
+.ptext3426-contact {
+    margin-bottom: 14px;
+}
+
+.ptext3426-fone {
+    margin-bottom: 8px;
+}
+
+.content-social-media-footer {
+    position: absolute;
+    left: 48px;
+    top: 485px;
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.content-social-media-footer p {
+    color: #FFF;
+
+    /* Body/14px SemiBold */
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 21px */
+}
+
+.copyright {
+    position: absolute;
+    left: 566px;
+    top: 485px;
+
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.design-project {
+    position: absolute;
+    right: 48px;
+    top: 485px;
+    color: var(--Cinza-Claro-25, rgba(252, 252, 252, 0.80));
+    text-align: right;
+
+    /* Body/14px Regular */
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
 
 
 
