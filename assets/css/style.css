@@ -1,11 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap");
 
+/* Reset e configurações base */
 * {
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    max-width: 1440px;
+}
+
+
+html {
+    /* Define 1rem = 10px para facilitar cálculos */
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--Preto-Charcoal-700, #0E161D);
+    overflow-x: hidden;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 132.2rem; /* 1322px */
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 :root {
@@ -49,199 +68,198 @@
     --line-height-130: 130%;
     --line-height-140: 140%;
     --line-height-150: 150%;
+
     --font-style-normal: normal;
+    --font-open-sans: 'Open Sans', sans-serif;
+    
+    --white: #FFF;
+    --black-900: #070B0E;
+     
+    /* Tamanhos */
+     --header-height: 8rem;
+     --container-padding: 1.5rem;
+
+     /* Breakpoints */
+     --mobile: 480px;
+     --tablet: 768px;
+     --laptop: 1024px;
+     --desktop: 1200px;
 }
 
-body {
-    max-width: 1440px;
-    background-color: #000;
 
-    position: relative;
-    width: 1440px;
-    height: auto;
-    background: var(--Preto-Charcoal-700, #0E161D);
-}
-
-
+/* components/header.css */
 header {
-    position: absolute;
-    z-index: 2;
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px 48px;
+    height: var(--header-height);
+    background: transparent;
+    z-index: 1000;
+}
+
+header .container {
+    height: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .div-img-logo {
-    width: 185.786px;
-    height: 24px;
-    flex-shrink: 0;
-    overflow: hidden;
+    width: 18.5rem;
+    height: 2.4rem;
+}
+
+.div-img-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .div-content-text-header {
     display: flex;
     align-items: center;
-    gap: 21px;
+    gap: 2.1rem;
 }
 
 .div-content-text-header a {
     text-decoration: none;
-    font-family: "Open Sans";
-    color: var(--White);
-    font-size: var(--font-size-14p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-600);
-    line-height: var(--line-height-150);
+    font-family: var(--font-open-sans);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 150%;
+    transition: opacity 0.3s ease;
+}
+
+.div-content-text-header a:hover {
+    opacity: 0.8;
 }
 
 .ButtonMain-header {
     display: flex;
-    height: 40px;
-    padding: 8px 20px;
+    height: 4rem;
+    padding: 0.8rem 2rem;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     border-radius: 2px;
-    background: var(--White);
+    background: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.ButtonMain-header:hover {
+    transform: translateY(-2px);
 }
 
 .ButtonMain-header a {
     text-decoration: none;
-    font-family: "Open Sans";
+    font-family: var(--font-open-sans);
     color: var(--black-900);
-    font-size: var(--font-size-18p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-600);
-    line-height: var(--line-height-140);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
 }
 
+/* layouts/banner1.css */
 .section-banner1 {
-    overflow-y: hidden;
-    width: 1440px;
-    height: 800px;
     position: relative;
-    background: linear-gradient(180deg, rgba(11, 17, 22, 0.50) 0%, rgba(11, 17, 22, 0.10) 50.3%, rgba(11, 17, 22, 0.50) 100%), url('./assets/img/2149211266-2.svg') no-repeat center center;
-    background-size: cover;
-}
-
-.section-banner1 img {
-    filter: brightness(75%);
-}
-
-.vector1,
-.vector2,
-.vector3,
-.vector-4 {
-    position: absolute;
-    z-index: 2;
-    width: 306.031px;
-    height: 232.584px;
-    flex-shrink: 0;
-    fill: rgba(255, 255, 255, 0.06);
-    stroke-width: 1px;
-    stroke: var(--White);
-}
-
-.vector1 {
-    top: 88px;
-    left: 394px;
-}
-
-.vector2 {
-    top: 88px;
-    left: 740.85px;
-}
-
-.vector3 {
-    transform: rotate(180deg);
-    top: 361.42px;
-    left: 394px;
-}
-
-.vector-4 {
-    transform: rotate(0deg);
-    top: 361.42px;
-    left: 740.85px;
-}
-
-.h1-content-banner {
-    position: absolute;
-    /*width: 784px;*/
-    top: 574px;
-    left: 48px;
-    z-index: 3;
-}
-
-.h1-content-banner h1 {
-    font-family: "Neue Haas Grotesk Display Pro";
-    color: var(--gray-25);
-    font-size: var(--font-size-48p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-700);
-    line-height: var(--line-height-110);
+    width: 100%;
+    min-height: 60rem;
     overflow: hidden;
 }
 
-.div-content-contact {
+.section-banner1 .bg-image {
     position: absolute;
-    z-index: 3;
-    display: inline-flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-banner1 .container {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4.8rem;
+    margin-top: 57.4rem;
+}
+
+/* Content Area */
+.h1-content-banner {
+    width: 100%;
+    max-width: 78.4rem;
+    margin: 0; /* Remove o margin: 0 auto do reset global */
+}
+
+.h1-titulo {
+    margin-bottom: 3.2rem;
+}
+
+.h1-titulo h1 {
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(3.2rem, 5vw, 4.8rem);
+    font-weight: 700;
+    line-height: 110%;
+}
+
+/* Buttons Area */
+.div-content-contact {
+    display: flex;
     align-items: center;
-    top: 704px;
-    left: 48px;
-    gap: 32px;
-    width: 357px;
-    height: 48px;
+    gap: 3.2rem;
 }
 
 .button-banner a {
-    overflow: hidden;
-    text-decoration: none;
-    display: flex;
-    height: 48px;
-    padding: 8px 20px;
-    justify-content: center;
+    display: inline-flex;
+    height: 4.8rem;
+    padding: 0.8rem 2rem;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    background: var(--white);
     border-radius: 2px;
-    font-family: "Open Sans";
-    background: var(--White);
+    text-decoration: none;
     color: var(--black-900);
-    font-size: var(--font-size-18p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-600);
-    line-height: var(--line-height-140);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+    transition: transform 0.3s ease;
+}
+
+.button-banner a:hover {
+    transform: translateY(-2px);
 }
 
 .button-saibMais {
-    overflow-y: hidden;
-    cursor: pointer;
-    gap: 10px;
     display: flex;
-    padding: 8px 0px;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 2px;
+    gap: 1rem;
+    cursor: pointer;
 }
 
 .button-saibMais a {
-    overflow: hidden;
     text-decoration: none;
-    font-family: "Open Sans";
     color: var(--gray-25);
-    font-size: var(--font-size-18p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-600);
-    line-height: var(--line-height-140);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
 }
 
 .button-saibMais img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
+}
 
-    width: 20px;
-    height: 20px;
+.button-saibMais:hover img {
+    transform: translateX(5px);
 }
 
 /*-----scroller-----*/
@@ -308,239 +326,120 @@ header {
 
 /*-----section scroller-----*/
 
-/*-----section banner 2-----*/
+/* layouts/banner2.css */
 .section-banner2 {
-    display: flex;
-    height: 812px;
-    align-self: stretch;
-    background: var(--White);
-    overflow: hidden;
-    justify-content: left;
     position: relative;
-    background-color: #dbd4d4;
+    width: 100%;
+    min-height: 81.2rem;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* Background Container */
+.banner2-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .img1-banner2 {
     position: absolute;
-    width: 1174px;
-    height: 812px;
-    flex-shrink: 0;
+    top: 0;
     right: 0;
-    filter: brightness(80%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.vector1-banner2 {
-    position: absolute;
-    left: -182px;
-    width: 1089px;
-    height: 819px;
-    flex-shrink: 0;
-    fill: var(--gray-100);
-}
-
-.vector3412, .vector3417 {
-    /*Inspect
-    border: 10px solid red;
-    border-radius: 50%;
-    Inspect*/
-    position: absolute;
+/* Container Principal */
+.section-banner2 .container {
+    position: relative;
+    height: 100%;
+    min-height: 81.2rem;
+    display: flex;
+    align-items: center;
     z-index: 2;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
 }
 
-.vector3412 {
-    left: 830px;
-    top: 143px;
-}
-
-.vector3417 {
-    left: 740px;
-    top: 386px;
-}
-
-.vector15 {
-    position: absolute;
-    z-index: 2;
-    width: 32px;
-    height: 100px;
-    flex-shrink: 0;
-    stroke-width: 1px;
-
-    stroke: var(--gray-500);
-    left: 48px;
-    top: 133px;
-}
-
-.vector19a {
-    position: absolute;
-    z-index: 2;
-    left: 845px;
-    top: 155px;
-}
-
-.vector12 {
-    position: absolute;
-    z-index: 2;
-    left: 840px;
-    top: 155px;
-    width: auto;
-    height: 605px;
-    flex-shrink: 0;
-    stroke-width: 1px;
-    stroke: #FFF;
-    opacity: 0.4;
-}
-
-.vector19b {
-    position: absolute;
-    z-index: 2;
-    left: 755px;
-    top: 395px;
-}
-
-.vector17 {
-    position: absolute;
-    z-index: 3;
-    left: 749.5px;
-    top: 405px;
-    width: auto;
-    height: 350px;
-    flex-shrink: 0;
-    stroke-width: 1px;
-    stroke: #FFF;
-    opacity: 0.4;
+/* Área de Conteúdo */
+.banner2-content {
+    width: 100%;
+    max-width: 59.9rem;
+    margin: 0;
+    padding: 8rem 0;
 }
 
 .text-content-banner2-h3 {
-    position: absolute;
-    z-index: 2;
     color: var(--black-900);
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 150%;
-    left: 90px;
-    top: 170px;
+    margin-bottom: 2rem;
 }
 
 .text-content-banner2-h2 {
-    position: absolute;
-    z-index: 2;
-    left: 48px;
-    top: 222px;
-    width: 700px;
-    height: 96px;
-    color: var(--Preto-Charcoal-900, #070B0E);
-
-    /* Heading/H2 40px Medium */
-    font-family: "Neue Haas Grotesk Display Pro";
-    font-size: 40px;
-    font-style: normal;
+    color: var(--black-900);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(3.2rem, 4vw, 4rem);
     font-weight: 600;
     line-height: 120%;
-    /* 48px */
     letter-spacing: 0.4px;
+    margin-bottom: 1.6rem;
 }
 
 .text-content-banner2-h3-2 {
-    position: absolute;
-    z-index: 2;
-    left: 48px;
-    top: 334px;
-    width: 599px;
-    color: var(--Preto-Charcoal-400, #40464D);
-
-    /* Body/18px Regular */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+    color: var(--black-400);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 150%;
-    /* 27px */
-
+    margin-bottom: 4rem;
 }
 
+/* Botão */
 .button-main-banner2 {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
     display: inline-flex;
-    padding: 8px 0px;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    left: 48px;
-    top: 500px;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.button-main-banner2:hover {
+    opacity: 0.8;
 }
 
 .button-main-banner2 a {
     text-decoration: none;
-    color: var(--Preto-Charcoal-900, #070B0E);
-
-    /* Button/Main */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 140%;
-    /* 25.2px */
 }
 
 .button-main-banner2 img {
-    z-index: 3;
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.button-main-banner2:hover img {
+    transform: translateX(5px);
 }
 
 .text-content-banner2-h3-3 {
-    position: absolute;
-    z-index: 2;
-    width: 393px;
-    left: 48px;
-    top: 620px;
-
-
-    color: var(--Preto-Charcoal-900, #070B0E);
-
-    /* Body/18px SemiBold */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 150%;
-    /* 27px */
-
-}
-
-.text-content-banner2-MLX-CAPITAL {
-    position: absolute;
-    z-index: 3;
-    left: 868px;
-    top: 131px;
-    display: inline-flex;
-    padding: 6px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    background: rgba(255, 255, 255, 0.30);
-}
-
-.text-content-banner2-MLX-CAPITAL h3 {
-    color: #FFF;
-    text-align: right;
-
-    /* Body/14px SemiBold */
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    /* 21px */
+    max-width: 39.3rem;
 }
 
 /*-----section banner 2-----*/
@@ -548,524 +447,422 @@ header {
 
 .section-banner3 {
     position: relative;
-    height: auto;
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--black-700, #0E161D);
+    overflow: hidden;
 }
 
-.vector15-banner3 {
-    position: absolute;
-    z-index: 2;
-    left: 48px;
-    top: 84px;
+/* Header Content */
+.banner3-header {
+    position: relative;
+    margin-bottom: 6rem;
+}
 
+.banner3-header-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.banner3-header-icon img {
+    width: 3.2rem;
+    height: auto;
 }
 
 .text-content-banner3h31 {
-    position: absolute;
-    top: 72.5px;
-    left: 95px;
-    color: var(--Cinza-Claro-25, #FCFCFC);
-
-    /* Body/14px SemiBold */
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
+    color: var(--gray-25);
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 150%;
-    /* 21px */
-
 }
 
 .text-content-banner3h21 {
-    position: absolute;
-    left: 48px;
-    top: 153px;
-    width: 725px;
-    color: var(--Cinza-Claro-25, #FCFCFC);
-
-    /* Heading/H2 40px Medium */
-    font-family: "Neue Haas Grotesk Display Pro";
-    font-size: 32px;
-    font-style: normal;
+    max-width: 72.5rem;
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.8rem, 3vw, 3.2rem);
     font-weight: 600;
     line-height: 120%;
-    /* 48px */
     letter-spacing: 0.4px;
 }
 
-.content-grade-frame svg {
-    position: absolute;
-    right: 0;
-    top: -105px;
-    width: 337.999px;
-    /*height: 338.009px;*/
-    flex-shrink: 0;
-    /*opacity: 0.2;
-    border: 1px solid red;*/
-
-}
-
+/* Call to Action Section */
 .content-button-banner3 {
-    position: absolute;
-    left: 955px;
-    top: 158px;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    gap: 1.6rem;
+    margin-bottom: 6rem;
 }
 
 .text-content-banner3h32 {
-    width: 241px;
-    color: var(--Cinza-Claro-25, #FCFCFC);
-    /* Body/18px Regular */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+    max-width: 24.1rem;
+    color: var(--gray-25);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 150%;
-    /* 27px */
+}
+
+.button-main-banner3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
 }
 
 .button-main-banner3 a {
+    color: var(--gray-25);
     text-decoration: none;
-    color: var(--Cinza-Claro-25, #FCFCFC);
-
-    /* Button/Main */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 140%;
-    /* 25.2px */
 }
 
 .button-main-banner3 img {
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
 }
 
+.button-main-banner3:hover img {
+    transform: translateX(5px);
+}
+
+/* Cards Grid */
 .div-content-banner3-wrapper-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    width: 100%;
+}
+
+.service-card {
     position: relative;
-    top: 362px;
-    width: 1344px;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-
+    aspect-ratio: 432/503;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.div-content-img-banner3-frame3445,
-.div-content-img-banner3-frame3446,
-.div-content-img-banner3-frame3447 {
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card-image {
     position: relative;
-
+    width: 100%;
+    height: 100%;
 }
 
-.vector-banner3445,
-.vector-banner3446,
-.vector-banner3447 {
-    position: absolute;
-    z-index: 3;
-    left: 66px;
-    top: 137px;
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.retangle-banner381 {
+.service-card-overlay {
     position: absolute;
-    z-index: 4;
+    bottom: 0;
     left: 0;
-    top: 0;
+    width: 100%;
+    padding: 3.2rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
 }
 
-.div-content-img-banner3-frame3445 h4 {
-    top: 321px;
+.service-card-content {
+    position: relative;
+    color: var(--white);
 }
 
-.div-content-img-banner3-frame3446 h4,
-.div-content-img-banner3-frame3447 h4 {
-    top: 387px;
-}
-
-.div-content-img-banner3-frame3445 h4,
-.div-content-img-banner3-frame3446 h4,
-.div-content-img-banner3-frame3447 h4 {
-    left: 32px;
-    position: absolute;
-    z-index: 4;
-    align-self: stretch;
-    color: #FFF;
-
-    /* Heading/H4 28px Medium */
-    font-family: "Neue Haas Grotesk Display Pro";
-    font-size: 28px;
-    font-style: normal;
+.service-card h4 {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: 2.8rem;
     font-weight: 600;
     line-height: 130%;
-    /* 36.4px */
+    margin-bottom: 1rem;
 }
 
-.div-content-img-banner3-frame3445 p {
-    position: absolute;
-    z-index: 4;
-    left: 32px;
-    top: 369px;
-    width: 289px;
-    color: #FFF;
-    /* Body/18px Regular */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+.service-card p {
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 150%;
-    /* 27px */
 }
 
-.text-content-banner323 {
-    position: absolute;
-    left: 32px;
-    top: 350px;
+.tag-soon {
     display: inline-flex;
-    padding: 4px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.80);
     background: rgba(255, 255, 255, 0.10);
+    margin-bottom: 1rem;
 }
 
-.text-content-banner323 P {
-    color: #FFF;
-    text-align: right;
-
-    /* Caption/14px SemiBold */
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
+.tag-soon p {
+    color: var(--white);
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 150%;
-    /* 21px */
     text-transform: uppercase;
 }
 
-.div-arrow-cursor {
+.cursor-icon {
     position: absolute;
-    z-index: 3;
-    left: 372px;
-    top: 402px;
-    display: flex;
-    width: 24px;
-    height: 24px;
-    padding: 3px 5.586px 3.422px 7px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+    right: 0;
+    bottom: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: transform 0.3s ease;
 }
 
-.div-arrow-cursor img {
-    filter: drop-shadow(0px 1px 1.8px rgba(0, 0, 0, 0.65));
+.service-card:hover .cursor-icon {
+    transform: translate(5px, -5px);
 }
 
 /*----SECTION BANNER 4----*/
 
 .section-banner4 {
-    position: absolute;
-    z-index: 4;
-    width: 1440px;
-    height: 586px;
-    top: 2762px;
-    bottom: 704px;
-    background-color: white;
-
+    position: relative;
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--white);
 }
 
-.vector15-banner4 {
-    z-index: 2;
-    position: absolute;
-    left: 48px;
-    top: 116px;
-
+/* Header da seção */
+.banner4-header {
+    position: relative;
+    margin-bottom: 6rem;
 }
 
-.section-banner4 h3 {
-    position: absolute;
-    left: 88px;
-    top: 100px;
-    color: var(--Preto-Charcoal-900, #070B0E);
+.banner4-header-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
 
-    /* Body/14px SemiBold */
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
+.banner4-header-icon img {
+    width: 3.2rem;
+    height: auto;
+}
+
+.banner4-header h3 {
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 150%;
-    /* 21px */
 }
 
-#p-text-banner41 {
-    position: absolute;
-    left: 48px;
-    top: 185px;
-    width: 629px;
-    color: var(--Preto-Charcoal-900, #070B0E);
-    font-family: "Neue Haas Grotesk Display Pro";
-    font-size: 32px;
-    font-style: normal;
+.banner4-header p {
+    max-width: 62.9rem;
+    color: var(--black-900);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.8rem, 3vw, 3.2rem);
     font-weight: 600;
     line-height: 120%;
-    /* 48px */
     letter-spacing: 0.4px;
 }
 
-.div-wrapper-content-banner43424 {
-    position: absolute;
-    width: auto;
-    height: 157px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    left: 48px;
-    top: 329px;
-    gap: 106.3px;
-
-}
-
-.div-content3420,
-.div-content3421,
-.div-content3422,
-.div-content3423 {
+/* Grid de benefícios */
+.benefits-grid {
     display: grid;
-    gap: 5%;
-
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    margin-top: 4rem;
 }
 
-.div-content3420 {
-    width: 231px;
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
-.div-content3421 {
-    width: 243px;
+.benefit-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-bottom: 0.8rem;
 }
 
-.div-content3422 {
-    width: 234px;
-}
-
-.div-content3423 {
-    width: 222px;
-}
-
-.div-content-vector {
+.benefit-icon img {
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
+    object-fit: contain;
 }
 
-.div-content-vector img {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-}
-
-.div-content3420 h5,
-.div-content3421 h5,
-.div-content3422 h5,
-.div-content3423 h5 {
-    width: 100%;
-    color: var(--Preto-Charcoal-900, #070B0E);
-
-    /* Heading/H5 20px Medium */
-    font-family: "Neue Haas Grotesk Display Pro";
-    font-size: 20px;
-    font-style: normal;
+.benefit-card h5 {
+    color: var(--black-900);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 140%;
-    /* 28px */
 }
 
-.div-content3420 p,
-.div-content3421 p,
-.div-content3422 p,
-.div-content3423 p {
-    width: 100%;
-    color: var(--Preto-Charcoal-400, #40464D);
-
-    /* Body/18px Regular */
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
+.benefit-card p {
+    color: var(--black-400);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 150%;
-    /* 27px */
 }
 
-footer {
-    position: absolute;
-    top: 3290px;
-    width: 1440px;
-    height: 708px;
+/* Hover effects */
+.benefit-card {
+    transition: transform 0.3s ease;
 }
 
-.div-content-vector-footer {
-    position: absolute;
-    left: 2px;
-    top: 565px;
+.benefit-card:hover {
+    transform: translateY(-5px);
 }
 
-footer img {
-    z-index: 4;
-    position: absolute;
-    left: 48px;
-    top: 146px;
+/* Footer */
+
+/* components/footer.css */
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--black-700, #0E161D);
+    color: var(--white);
 }
 
-.wrapper-text-content-footer-contact3442 {
-    position: absolute;
-    left: 48px;
-    top: 224px;
-    width: 521px;
-    display: block;
+/* Logo */
+.footer-logo {
+    margin-bottom: 5.4rem;
 }
 
-.wrapper-text-content-footer-contact3442 h2 {
-    width: 493px;
-    color: var(--Cinza-Claro-25, #FCFCFC);
+.footer-logo img {
+    height: 2.4rem;
+    width: auto;
+}
 
-    /* Heading/H2 40px Medium */
-    font-family: "Neue Haas Grotesk Display Pro";
-    font-size: 32px;
-    font-style: normal;
+/* Grid Layout */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+/* CTA Section */
+.footer-cta {
+    max-width: 52.1rem;
+}
+
+.footer-cta h2 {
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
     font-weight: 600;
     line-height: 120%;
-    /* 48px */
     letter-spacing: 0.4px;
-    margin-left: 0;
-    margin-bottom: 32px;
+    margin-bottom: 3.2rem;
 }
 
-.Button-main-footer3442 a {
-    margin-left: 0;
-    width: 200px;
-    overflow: hidden;
-    text-decoration: none;
-    display: flex;
-    height: 48px;
-    padding: 8px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 2px;
-    font-family: "Open Sans";
-    background: var(--White);
-    color: var(--black-900);
-    font-size: var(--font-size-18p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-600);
-    line-height: var(--line-height-140);
-}
-
-.wrapper-text-content-footer3426 {
-    position: absolute;
-    right: 48px;
-    top: 204px;
-    display: flex;
-    width: 358px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.ptext3426,
-.ptext3426-contact,
-.ptext3426-whatsapp,
-.ptext3426-fone,
-.ptext3426-email-contatc,
-.ptext3426-email {
-    align-self: stretch;
-    color: var(--Cinza-Claro-25, #FCFCFC);
-    font-family: "Open Sans";
-    font-style: normal;
-    line-height: 150%;
-    margin-left: 0;
-}
-
-.ptext3426,
-.ptext3426-contact,
-.ptext3426-email,
-.ptext3426-fone {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.ptext3426-whatsapp,
-.ptext3426-email-contatc {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.ptext3426 {
-    margin-bottom: 14px;
-}
-
-.ptext3426-contact {
-    margin-bottom: 14px;
-}
-
-.ptext3426-fone {
-    margin-bottom: 8px;
-}
-
-.content-social-media-footer {
-    position: absolute;
-    left: 48px;
-    top: 485px;
+.footer-cta-button {
     display: inline-flex;
+    height: 4.8rem;
+    padding: 0.8rem 2rem;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
 }
 
-.content-social-media-footer p {
-    color: #FFF;
+.footer-cta-button:hover {
+    transform: translateY(-2px);
+}
 
-    /* Body/14px SemiBold */
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
+.footer-cta-button a {
+    color: var(--black-900);
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
     font-weight: 600;
-    line-height: 150%;
-    /* 21px */
+    line-height: 140%;
 }
 
-.copyright {
-    position: absolute;
-    left: 566px;
-    top: 485px;
+/* Contact Info */
+.footer-contact {
+    max-width: 35.8rem;
+}
 
-    color: #FFF;
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
+.footer-contact p {
+    font-family: var(--font-open-sans);
+    line-height: 150%;
+    margin-bottom: 1.4rem;
+}
+
+.footer-description {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+}
+
+.contact-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--gray-25);
+}
+
+.contact-value {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--gray-25);
+    margin-bottom: 1.4rem;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3.2rem;
+}
+
+/* Social Media */
+.footer-social {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.footer-social a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.8;
+}
+
+/* Copyright and Credits */
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.copyright, .credits {
+    color: var(--gray-25);
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 150%;
 }
 
-.design-project {
-    position: absolute;
-    right: 48px;
-    top: 485px;
-    color: var(--Cinza-Claro-25, rgba(252, 252, 252, 0.80));
-    text-align: right;
-
-    /* Body/14px Regular */
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    /* 21px */
+.credits {
+    opacity: 0.8;
 }
-
 
 
 /*-----section banner 3-----*/
