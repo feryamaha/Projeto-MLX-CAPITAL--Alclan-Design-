@@ -83,7 +83,6 @@ body {
      --mobile: 480px;
      --tablet: 768px;
      --laptop: 1024px;
-     --desktop: 1200px;
 }
 
 
@@ -865,4 +864,18 @@ header .container {
 }
 
 
-/*-----section banner 3-----*/
+/*----- mobile -----*/
+
+@media (max-width: 900px) {
+    .text-content-banner2-h3-2 {
+        max-width: 43.1rem;
+    }
+
+    .text-content-banner2-h3-3 {
+        max-width: 30rem;
+    }
+
+    .text-content-banner2-h2 {
+        max-width: 45rem;
+    }
+}
