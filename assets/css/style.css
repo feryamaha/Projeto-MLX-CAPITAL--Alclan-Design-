@@ -992,6 +992,7 @@ header .container {
     }
 
     .div-content-banner3-wrapper-img {
+        background-color: blue;
         display: block;
     }
 
