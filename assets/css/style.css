@@ -869,6 +869,11 @@ header .container {
     opacity: 0.8;
 }
 
+.footer-info span,
+.contact-value {
+    color: var(--gray-700);
+}
+
 /*-----section banner 3-----*/
 
 /*----- mobile
@@ -992,7 +997,6 @@ header .container {
     }
 
     .div-content-banner3-wrapper-img {
-        background-color: blue;
         display: block;
     }
 
