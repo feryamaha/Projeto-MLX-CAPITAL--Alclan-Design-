@@ -112,14 +112,16 @@ header .container {
 }
 
 .div-img-logo {
-    width: 18.5rem;
-    height: 2.4rem;
+    border-radius: 10%;
+    height: 5.4rem;
 }
 
 .div-img-logo img {
+    border-radius: 10%;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: brightness(120%);
 }
 
 .div-content-text-header {
@@ -132,7 +134,7 @@ header .container {
     text-decoration: none;
     font-family: var(--font-open-sans);
     color: var(--white);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 150%;
     transition: opacity 0.3s ease;
@@ -140,6 +142,7 @@ header .container {
 
 .div-content-text-header a:hover {
     opacity: 0.8;
+    border-bottom: 1px solid var(--gray-800);
 }
 
 .ButtonMain-header {
@@ -170,7 +173,7 @@ header .container {
 .section-banner1 {
     position: relative;
     width: 100%;
-    min-height: 60rem;
+    height: 85vh;
     overflow: hidden;
 }
 
@@ -202,13 +205,13 @@ header .container {
 }
 
 .h1-titulo {
-    margin-bottom: 3.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .h1-titulo h1 {
     color: var(--gray-25);
     font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(3.2rem, 5vw, 4.8rem);
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
     font-weight: 700;
     line-height: 110%;
 }
@@ -270,64 +273,34 @@ header .container {
 /*-----scroller-----*/
 
 .section-scroller {
-    height: 106px;
-    padding: 2%;
+    height: 105px;
     display: flex;
     padding: 32px 0px;
     justify-content: flex-end;
     align-items: center;
     align-self: stretch;
-    border: 1px solid var(--gray-600);
-    background: var(--gray-300);
+    background: var(--Preto-Charcoal-700, #0E161D);
     overflow: hidden;
     white-space: nowrap;
     position: relative;
 }
 
 .scroller-content {
-    min-width: 100vh;
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    width: 100%;
+    height: 85%;
     display: inline-block;
     white-space: nowrap;
     transform: translateX(100%);
+    margin-bottom: 2%;
+    gap: 20px;
+    opacity: 10%;
 }
 
-.content-scroller-h5 {
-    display: flex;
-    padding: 4px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 6px;
-    border: 1px solid var(--Cinza-Claro-600, #AEAEAB);
-    background: var(--Cinza-Claro-400, #E1E1DE);
+.scroller-content img {
+    height: 30px;
+    margin-right: 3%;
 }
 
-.scroller-content h3 {
-    font-family: "Neue Haas Grotesk Display Pro";
-    color: var(--black-900);
-    font-size: var(--font-size-32p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-500);
-    line-height: var(--line-height-130);
-}
-
-.content-scroller-h5 {
-    text-align: right;
-    font-family: "Open Sans";
-    color: var(--black-900);
-    font-size: var(--font-size-14p);
-    font-style: var(--font-style-normal);
-    font-weight: var(--font-weight-400);
-    line-height: var(--line-height-150);
-}
-
-.scroller-content h3, .scroller-content .content-scroller-h5 {
-    display: inline-block;
-    margin: 0 24px;
-}
 
 /*-----section scroller-----*/
 
@@ -347,6 +320,7 @@ header .container {
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 98%;
 }
 
 .img1-banner2 {
@@ -380,7 +354,8 @@ header .container {
 .text-content-banner2-h3 {
     color: var(--black-900);
     font-family: var(--font-open-sans);
-    font-size: 1.4rem;
+    color: var(--black-200);
+    font-size: 2.4rem;
     font-weight: 600;
     line-height: 150%;
     margin-bottom: 2rem;
@@ -389,7 +364,8 @@ header .container {
 .text-content-banner2-h2 {
     color: var(--black-900);
     font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(3.2rem, 4vw, 4rem);
+    font-size: clamp(2.2rem, 4vw, 2rem);
+    color: var(--black-100);
     font-weight: 600;
     line-height: 120%;
     letter-spacing: 0.4px;
@@ -399,10 +375,27 @@ header .container {
 .text-content-banner2-h3-2 {
     color: var(--black-400);
     font-family: var(--font-open-sans);
-    font-size: 1.8rem;
+    color: var(--gray-600);
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 150%;
     margin-bottom: 4rem;
+}
+
+.text-content-banner2-h3-2 span {
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.content-text2h32-1,
+.content-text2h32-2,
+.content-text2h32-3,
+.content-text2h32-4,
+.content-text2h32-5,
+.content-text2h32-6,
+.content-text2h32-7,
+.content-text2h32-8 {
+    margin-bottom: 1%;
 }
 
 /* Botão */
@@ -464,77 +457,23 @@ header .container {
     margin-bottom: 6rem;
 }
 
-.banner3-header-icon {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.banner3-header-icon img {
-    width: 3.2rem;
-    height: auto;
-}
-
 .text-content-banner3h31 {
     color: var(--gray-25);
     font-family: var(--font-open-sans);
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 150%;
+    margin-bottom: 2%;
 }
 
 .text-content-banner3h21 {
     max-width: 72.5rem;
     color: var(--gray-25);
     font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(2.8rem, 3vw, 3.2rem);
+    font-size: clamp(1.8rem, 3vw, 1.2rem);
     font-weight: 600;
     line-height: 120%;
     letter-spacing: 0.4px;
-}
-
-/* Call to Action Section */
-.content-button-banner3 {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    margin-bottom: 6rem;
-}
-
-.text-content-banner3h32 {
-    max-width: 24.1rem;
-    color: var(--gray-25);
-    font-family: var(--font-open-sans);
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.button-main-banner3 {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-}
-
-.button-main-banner3 a {
-    color: var(--gray-25);
-    text-decoration: none;
-    font-family: var(--font-open-sans);
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 140%;
-}
-
-.button-main-banner3 img {
-    width: 2rem;
-    height: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.button-main-banner3:hover img {
-    transform: translateX(5px);
 }
 
 /* Cards Grid */
